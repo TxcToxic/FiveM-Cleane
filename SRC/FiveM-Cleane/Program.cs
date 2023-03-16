@@ -26,7 +26,7 @@ namespace FiveM_Cleane
 
                 if (directory.Exists)
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("[#] In directory: " + directory.FullName);
                     Console.ResetColor();
                     foreach (DirectoryInfo subDirectory in directory.GetDirectories())
@@ -42,7 +42,7 @@ namespace FiveM_Cleane
                     }
                     if (directory2.Exists)
                     {
-                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("[#] In directory: " + directory2.FullName);
                         Console.ResetColor();
                         foreach (DirectoryInfo subDir in directory2.GetDirectories())
@@ -66,7 +66,7 @@ namespace FiveM_Cleane
                 }
                 if (directory3.Exists)
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("[#] In directory: " + directory3.FullName);
                     Console.ResetColor();
                     foreach (FileInfo file in directory3.GetFiles())
@@ -80,7 +80,7 @@ namespace FiveM_Cleane
                 }
                 if (directory4.Exists)
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("[#] In directory: " + directory4.FullName);
                     Console.ResetColor();
                     foreach (FileInfo file in directory4.GetFiles())

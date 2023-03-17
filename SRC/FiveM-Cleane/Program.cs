@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -95,6 +95,27 @@ namespace FiveM_Cleane
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("[*] Completely done! | Everything Got Removed.");
                 Console.ResetColor();
+                Console.Write("Do you want to remove additional data to be able to get unbaned? Press [" + ConsoleKey.Y + "]");
+                ConsoleKeyInfo key = Console.ReadKey();
+                if (key.Key == ConsoleKey.Y)
+                {
+                    DirectoryInfo addPath = new DirectoryInfo(@"C:\Users\" + Environment.UserName + @"\AppData\Local\DigitalEntitlements");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("[#] In directory: " + addPath.FullName);
+                    Console.ResetColor();
+                    foreach (FileInfo file in addPath.GetFiles())
+                    {
+                        file.Delete();
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("[+] Deleted > ");
+                        Console.ResetColor();
+                        Console.WriteLine(file.Name);
+                    }
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("[*] Completely done! | Additional Data Got Removed.");
+                    Console.WriteLine("[!] Change Rockstar & Steam Account + Sign out from FiveM!");
+                    Console.ResetColor();
+                }
             }
             catch (Exception e)
             {
